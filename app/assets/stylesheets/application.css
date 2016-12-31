@@ -1,15 +1,119 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+html, body {
+    height: 100%;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin: 0;
+    background:#c9e2ed;
+    width:4500px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+}
+
+.quicksand{
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+.nav li i{
+  font-size: 30px;
+
+}
+
+div#div-line{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid white;
+    margin: 1em 0;
+    padding: 0;
+    width: 300px;
+}
+
+#title{ 
+  width: auto;
+}
+
+#name{
+  font-size: 50px;
+  font-weight: 600;
+}
+
+#dev{
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.section{
+    margin:0px;
+    bottom:0px;
+    width:1500px;
+    float:left;
+    height:100%;
+    text-shadow:1px 1px 2px #f0f0f0;
+}
+
+.section h2{
+    margin:50px 0px 30px 50px;
+}
+
+.section p{
+    margin:20px 0px 0px 50px;
+    width:600px;
+}
+
+.black{
+    color:#fff;
+    background:#c9e2ed;
+}
+
+.white{
+    color:#000;
+    background:#EEF0F2;
+}
+
+.section ul{
+    list-style:none;
+    margin:20px 0px 0px 550px;
+}
+
+.black ul li{
+    float:left;
+    padding:5px;
+    margin:5px;
+    color:#aaa;
+}
+
+.black ul li a{
+    display:block;
+    color:#f0f0f0;
+}
+
+.black ul li a:hover{
+    text-decoration:none;
+    color:#fff;
+}
+
+.white ul li{
+    float:left;
+    padding:5px;
+    margin:5px;
+    color:#aaa;
+}
+
+.white ul li a{
+    display:block;
+    color:#222;
+}
+
+.white ul li a:hover{
+    text-decoration:none;
+    color:#000;
+}
