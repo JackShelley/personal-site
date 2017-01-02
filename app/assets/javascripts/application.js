@@ -11,25 +11,61 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.slick
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
 
-$(function() {
-  $('ul.nav a').bind('click',function(event){
-    var $anchor = $(this);
-    /*
-    if you want to use one of the easing effects:
-    $('html, body').stop().animate({
-      scrollLeft: $($anchor.attr('href')).offset().left
-    }, 1500,'easeInOutExpo');
-     */
-    $('html, body').stop().animate({
-      scrollLeft: $($anchor.attr('href')).offset().left
-    }, 1000);
-    event.preventDefault();
+var items;
+$(document).ready(function(){
+
+  $.ajax({
+    url: '/',
+    method: "GET",
+    data: 'swag',
+    dataType: "JSON"
+  }).done(function(response) {
+    items = response
   });
 
-});
 
+  function slideIn(){
+    $('#title-name').addClass('slide-effect')
+    $('#title-description').addClass('slide-effect2')
+  }
+  function slideOut(){
+    $('#title-name').removeClass('slide-effect')
+    $('#title-description').removeClass('slide-effect2')
+  }
+
+  $('#cowboy').click(function(event){ 
+    slideOut();
+    setTimeout(function changeName(){
+    $('#title-name').html(items[0].title)
+    $('#title-description').html(items[0].description)
+    slideIn();
+    }, 1000)
+    
+  })
+  $('#wizard').click(function(event){ 
+    slideOut();
+    setTimeout(function changeName(){
+    $('#title-name').html(items[1].title)
+    $('#title-description').html(items[1].description)
+    slideIn();
+    }, 1000)
+    // $('#title-name').addClass('slide-effect')
+    // $('#title-description').addClass('slide-effect2')
+    
+
+
+  })
+  $('#fucker').click(function(event){ 
+    $('#title-name').html(items[2].title)
+    $('#title-description').html(items[2].description)
+    $('#title-name').addClass('slide-effect')
+    // $('#title-description').addClass('slide-effect2')
+  })
+  
+}); 
