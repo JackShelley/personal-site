@@ -3,16 +3,17 @@
 3 *= require slick
 4 *= require slick-theme
 5 *= require_self
-
+  *= require animate
 6 */
 body{
     margin: 0;
-    background:#c9e2ed;
+    background: #a5c1ce;
     width:100%;
     position:absolute;
     top:0px;
     left:0px;
     bottom:0px;
+    overflow: hidden;
 }
  .line{
 width: 40%;
@@ -99,7 +100,7 @@ position: absolute;
 }
 #title-description{
    text-indent: 50px;
-  width: 40%;
+  width: 50%;
   font-size: 25px;
   float: left;
   margin-top: 0px;
@@ -155,7 +156,7 @@ position: absolute;
 
 .slide2 {
     position: absolute;
-    left: -500px;
+    left: -550px;
     width: 400px;
     height: 100px;
     transition: 1s;
@@ -164,3 +165,26 @@ position: absolute;
     transition: 1s;
     left: 0;
 }
+
+.hat{
+  pointer-events: none;
+  float: right;
+  z-index: 25;
+  margin-right: 15px;
+  margin-top: -710px;
+}
+#miner{
+  margin-top: -680px;
+  transform: rotate(8deg);
+}
+#cowboy{
+  margin-right: -32px;
+  transform: rotate(12deg);
+}
+#wizard{
+  transform: rotate(10deg);
+  margin-top: -900px;
+  margin-right: 10px;
+}
+
+

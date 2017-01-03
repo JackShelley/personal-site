@@ -18,7 +18,9 @@
 
 
 var items;
+var lastHat;
 $(document).ready(function(){
+$(".hat").hide();
 
   $.ajax({
     url: '/',
@@ -30,39 +32,71 @@ $(document).ready(function(){
   });
 
 
-  function slideIn(){
+  function slideIn(hat){
+    $(hat).show();
     $('#title-name').addClass('slide-effect')
     $('#title-description').addClass('slide-effect2')
+    $(hat).removeClass('slideOutRight')
+    $(hat).addClass('slideInRight')
   }
-  function slideOut(){
+  function slideOut(hat){
     $('#title-name').removeClass('slide-effect')
     $('#title-description').removeClass('slide-effect2')
+    $(hat).removeClass('slideInRight')
+    $(hat).addClass('slideOutRight')
   }
-  function changeNameTimer(num){
+  function changeNameTimer(num, hat){
     setTimeout(function changeName(){
     $('#title-name').html(items[num].title)
     $('#title-description').html(items[num].description)
-    slideIn();
+    slideIn(hat);
     }, 1000)
   }
+  function resetSquare(){
+    $('#icon-container').children().css('background-color', "transparent")
+  }
 
-  $('#cowboy').click(function(event){ 
-    slideOut();
-    changeNameTimer(0);
-    
+  $('#square1').click(function(event){ 
+    var hat = '#wizard'
+    resetSquare();
+    $('#square1').css('background-color', "white")
+    slideOut(lastHat);
+    changeNameTimer(0, hat);
+    lastHat = '#wizard'
   })
-  $('#wizard').click(function(event){ 
-    slideOut();
-    changeNameTimer(1);
-    
 
+  $('#square2').click(function(event){ 
+    var hat = '#cowboy'
+    resetSquare();
+    $('#square2').css('background-color', "white")
+    slideOut(lastHat);
+    changeNameTimer(1, hat);
+    lastHat = '#cowboy'
+  })
+  $('#square3').click(function(event){ 
+    var hat = '#miner'
+    resetSquare();
+    $('#square3').css('background-color', "white")
+    slideOut(lastHat);
+    changeNameTimer(2, hat);
+    lastHat = '#miner'
+  })
+  $('#square4').click(function(event){ 
+    var hat = '#wizard'
+    resetSquare();
+    $('#square4').css('background-color', "white")
+    slideOut(lastHat);
+    changeNameTimer(3, hat);
+    lastHat = '#wizard'
+  })
+  $('#square5').click(function(event){ 
+    var hat = '#cowboy'
+    resetSquare();
+    $('#square5').css('background-color', "white")
+    slideOut(lastHat);
+    changeNameTimer(4, hat);
+    lastHat = '#cowboy'
+  })
 
-  })
-  $('#fucker').click(function(event){ 
-    $('#title-name').html(items[2].title)
-    $('#title-description').html(items[2].description)
-    $('#title-name').addClass('slide-effect')
-    // $('#title-description').addClass('slide-effect2')
-  })
   
 }); 
