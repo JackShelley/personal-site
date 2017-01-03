@@ -38,25 +38,22 @@ $(document).ready(function(){
     $('#title-name').removeClass('slide-effect')
     $('#title-description').removeClass('slide-effect2')
   }
+  function changeNameTimer(num){
+    setTimeout(function changeName(){
+    $('#title-name').html(items[num].title)
+    $('#title-description').html(items[num].description)
+    slideIn();
+    }, 1000)
+  }
 
   $('#cowboy').click(function(event){ 
     slideOut();
-    setTimeout(function changeName(){
-    $('#title-name').html(items[0].title)
-    $('#title-description').html(items[0].description)
-    slideIn();
-    }, 1000)
+    changeNameTimer(0);
     
   })
   $('#wizard').click(function(event){ 
     slideOut();
-    setTimeout(function changeName(){
-    $('#title-name').html(items[1].title)
-    $('#title-description').html(items[1].description)
-    slideIn();
-    }, 1000)
-    // $('#title-name').addClass('slide-effect')
-    // $('#title-description').addClass('slide-effect2')
+    changeNameTimer(1);
     
 
 

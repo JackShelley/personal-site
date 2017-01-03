@@ -39,7 +39,7 @@ position: absolute;
 }
 #title-container{
 
-  margin-top: -60px;
+  margin-top: -80px;
 }
 
 #name{
@@ -61,7 +61,7 @@ position: absolute;
   float: right;
   margin-right: 0px;
   overflow: hidden;
-  margin-top: -135px;
+  margin-top: -750px;
 }
 
 #icons-container{
@@ -90,14 +90,17 @@ position: absolute;
   text-align: center;
   letter-spacing: 2px;
   width: 400px;
+  color: white;
+  font-weight: 600;
   font-size: 40px;
 }
 .arrow{
   display: inline-block;
 }
 #title-description{
+   text-indent: 50px;
   width: 40%;
-  font-size: 30px;
+  font-size: 25px;
   float: left;
   margin-top: 0px;
   margin-left: 40px;
@@ -105,8 +108,8 @@ position: absolute;
 }
 
 .wrapper {
+  margin-top: 50px;
   margin-left: 75px;
-  border: solid 7px red;
     position: relative;
     overflow: hidden;
     width: 400px;
@@ -138,32 +141,26 @@ position: absolute;
    border: solid 7px #efefef;
 }
 #icon-container{
+  margin-top: -20px;
   margin-left: 35%;
 }
 
 .wrapper2 {
   margin-left: 75px;
-  border: solid 7px red;
     position: relative;
     overflow: hidden;
-    width: 400px;
-    height: 100px; 
+    width: 1000px;
+    height: 600px; 
 }
 
 .slide2 {
     position: absolute;
-    left: -400px;
+    left: -500px;
     width: 400px;
     height: 100px;
     transition: 1s;
 }
-.slide-effect2 {
+.slide-effect2 {  
     transition: 1s;
     left: 0;
 }
-
-.slide-out {
-    transition: 1s;
-    left: 400!important;
-}
-/**/
