@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>Jack Shelley</title>
   <%= csrf_meta_tags %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"
+<link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <script src="https://use.fontawesome.com/9172b560d3.js"></script>
+</head>
 
-  <script src="https://use.fontawesome.com/8f84b7372d.js"></script>
-
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
+  <div id="title-container">
+    <div id='title'>
+      <h1 class='quicksand' id='name'>JACK SHELLEY<div class="line"></div><div id='subtitle'>a man of many hats</div></h1>
+    </div>
+  </div>
+  <div id="icon-container">
+    <div class='square' id='square1'></div>
+    <div class='square' id='square2'></div>
+    <div class='square' id='square3'></div>
+    <div class='square' id='square4'></div>
+    <div class='square' id='square5'></div>
+  </div>
 
-  <div class="section black" id="section1">
-    <h2>Section 1</h2>
-    <p>
-      <div class="title-container">
-        <div id='title'>
-          <h1 class='quicksand' id='name'>Jack Shelley</h1>
-          <div id='div-line'></div>
-          <h2 class='quicksand' id='dev'>Web Developer</h2>
+  <div class="wrapper">
+     <div class='quicksand slide slide-effect'id='title-name'><%=@thing.first['title']%></div> 
+  </div>
+
+    <div class="wrapper2">
+       <div class='quicksand slide2 title-description slide-effect2'><%=@thing.first['description']%>
+        <div id='contact-icons'>
+          <i class="fa fa-envelope-square" aria-hidden="true"></i>
+          <i class="fa fa-git-square" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          <i class="fa fa-phone-square" aria-hidden="true"></i>
         </div>
+       </div>
+    </div>
+
+    <div id='home_drawing'><%= image_tag("imageedit_7_5031060546.png", size: "500x740", alt: "home_drawing") %></div>
+
+    <div class='wrapper3'>
+      <div class='hat animated' id='miner'>
+        <%= image_tag("miner.png", size: "450x225", alt: "hat") %>
       </div>
-    </p>
-    <ul class="nav">
-      <li><a href="#section1"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
-      <li><a href="#section2"><i class="fa fa-circle-o" aria-hidden="true"></i></a></li>
-      <li><a href="#section3"><i class="fa fa-circle-o" aria-hidden="true"></i></a></li>
-    </ul>
-  </div>
+      <div class='hat animated' id='cowboy'>
+        <%= image_tag("cowboy.png", size: "515x256", alt: "hat") %>
+      </div>
+      <div class='hat animated' id='wizard'>
+        <%= image_tag("wizard.png", size: "440x400", alt: "hat") %>
+      </div>
 
-  <div class="section white" id="section2">
-    <h2>Section 2</h2>
-    <p>
-      A fathomless and boundless deep,
-      There we wander, there we weep;
-      On the hungry craving wind
-      My Spectre follows thee behind.
-
-    </p>
-    <ul class="nav">
-      <li><a href="#section1"><i class="fa fa-circle-o" aria-hidden="true"></i></a></li>
-      <li><a href="#section2"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
-      <li><a href="#section3"><i class="fa fa-circle-o" aria-hidden="true"></i></a></li>
-    </ul>
-  </div>
-
-  <div class="section black" id="section3">
-    <h2>Contact!</h2>
-    <p>
-      He scents thy footsteps in the snow
-      Wheresoever thou dost go,
-      Thro' the wintry hail and rain.
-      When wilt thou return again?
-
-    </p>
-
-    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-    <a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-    <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-    <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
-
-
-    <ul class="nav">
-      <li><a href="#section1"><i class="fa fa-circle-o" aria-hidden="true"></i></a></li>
-      <li><a href="#section2"><i class="fa fa-circle-o" aria-hidden="true"></i></a></li>
-      <li><a href="#section3"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
-    </ul>
-  </div>
+    </div>
+      <div class="demo animated">
+</div>
+<div id='contact' class='quicksand'>contact</div>
 
 </body>
 </html>
