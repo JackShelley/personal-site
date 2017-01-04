@@ -7,7 +7,7 @@
 6 */
 body{
     margin: 0;
-    background: #a5c1ce;
+    background: #9AD1D4;
     width:100%;
     position:absolute;
     top:0px;
@@ -16,17 +16,17 @@ body{
     overflow: hidden;
 }
  .line{
-width: 40%;
-height: 47px;
-margin-left: 01.5%;
-margin-top: -48px;
-border-bottom: 5px solid white;
-position: absolute;
+  width: 40%;
+  height: 47px;
+  margin-left: 01.5%;
+  margin-top: -48px;
+  border-bottom: 5px solid #f9f9f9;
+  position: absolute;
 }
 
 .quicksand{
   font-family: 'Ubuntu', sans-serif;
-  color: white;
+  color: #f9f9f9;
 }
 
 #title{ 
@@ -39,18 +39,19 @@ position: absolute;
   font-size: 30px;
 }
 #title-container{
-
   margin-top: -80px;
 }
 
 #name{
+  box-shadow: 0px 0px 12px 6px #565656;
+  background: #f76a6a;
   padding: 5px;
   padding-left: 3px;
   padding-right: 3px;
   letter-spacing: 5px;
   font-size: 60px;
   font-weight: 600;
-  border: 5px solid white;
+  border: 5px solid #f9f9f9;
   width: 48%;
   text-align: center;
   margin-left: 25%;
@@ -62,7 +63,7 @@ position: absolute;
   float: right;
   margin-right: 0px;
   overflow: hidden;
-  margin-top: -750px;
+  margin-top: -1150px;
 }
 
 #icons-container{
@@ -70,14 +71,17 @@ position: absolute;
   margin-top: -30px;
 }
 .fa{
-  padding: 0 20px 0 20px;
-  font-size: 50px;
-  color: white;
+  display: inline-block;
+  font-size: 55px;
+  color: #f9f9f9;
 }
 .fa:hover{
   color: #efefef;
 }
-
+#contact-icons{
+  margin-top: 30px;
+  margin-left: -40px;
+}
 
 .arrow-container{
   display: inline-block;
@@ -87,41 +91,70 @@ position: absolute;
   margin-top: -100px;
 }
 #title-name{
+  box-shadow: 0px 0px 12px 6px #565656;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #f76a6a;
   display: inline-block;
   text-align: center;
   letter-spacing: 2px;
-  width: 400px;
-  color: white;
+  width: 550px;
+  color: #f9f9f9;
   font-weight: 600;
   font-size: 40px;
+  margin-top: 40px;
+  z-index: -10;
 }
 .arrow{
   display: inline-block;
 }
-#title-description{
-   text-indent: 50px;
-  width: 50%;
+.title-description{
+  box-shadow: 0px 0px 12px 6px #565656;
+  background: #f76a6a;
+  padding: 20px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  text-indent: 50px;
+  width: 400px;
   font-size: 25px;
   float: left;
-  margin-top: 0px;
-  margin-left: 40px;
-
+  margin-top: 20px;
+  z-index: -10;
 }
-
+#contact{
+  color: #444444;
+  padding-left: 40px;
+  padding-top: 05px;
+  font-size: 30px;
+  border: 5px solid #f9f9f9;
+  background: #e3e4e5;
+  border-radius: 40px;
+  width: 300px;
+  height: 100px;
+  float: right;
+  margin-top: -470px;
+  margin-right: -150px;
+}
 .wrapper {
   margin-top: 50px;
-  margin-left: 75px;
-    position: relative;
-    overflow: hidden;
-    width: 400px;
-    height: 100px; 
+  position: relative;
+  overflow: hidden;
+  width: 1000px;
+  height: 100px; 
 }
-
+.wrapper2 {
+  margin-left: 0px;
+  position: relative;
+  overflow: hidden;
+  width: 1000px;
+  height: 1000px; 
+  z-index: -20;
+}
 .slide {
     position: absolute;
     left: -400px;
-    width: 400px;
-    height: 100px;
+    width: 1200px;
+    height: auto;
     transition: 1s;
 }
 .slide-effect {
@@ -132,38 +165,32 @@ position: absolute;
   -moz-border-radius: 50px/50px;
   -webkit-border-radius: 50px 50px;
   border-radius: 10px/10px;
-  border: solid 7px white;
+  border: solid 7px #f9f9f9;
   width: 50px;
   height: 50px;
   display: inline-block;
   margin-left: 20px;
 }
 .square:hover{
-   border: solid 7px #efefef;
+   border: solid 7px white;
+   box-shadow: 1px 1px 12px 1px #565656;
 }
 #icon-container{
   margin-top: -20px;
   margin-left: 35%;
 }
 
-.wrapper2 {
-  margin-left: 75px;
-    position: relative;
-    overflow: hidden;
-    width: 1000px;
-    height: 600px; 
+.slide2 {
+  position: absolute;
+  left: -550px;
+  width: 460px;
+  height: auto;
+  transition: 1s;
 }
 
-.slide2 {
-    position: absolute;
-    left: -550px;
-    width: 400px;
-    height: 100px;
-    transition: 1s;
-}
 .slide-effect2 {  
-    transition: 1s;
-    left: 0;
+  transition: 1s;
+  left: 0;
 }
 
 .hat{
@@ -171,19 +198,19 @@ position: absolute;
   float: right;
   z-index: 25;
   margin-right: 15px;
-  margin-top: -710px;
 }
 #miner{
-  margin-top: -680px;
+  margin-top: -1070px;
   transform: rotate(8deg);
 }
 #cowboy{
   margin-right: -32px;
+  margin-top: -1130px;
   transform: rotate(12deg);
 }
 #wizard{
   transform: rotate(10deg);
-  margin-top: -900px;
+  margin-top: -1300px;
   margin-right: 10px;
 }
 

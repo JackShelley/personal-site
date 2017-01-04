@@ -21,6 +21,8 @@ var items;
 var lastHat;
 $(document).ready(function(){
 $(".hat").hide();
+$('#title-name').addClass('slide-effect')
+$('.title-description').addClass('slide-effect2')
 
   $.ajax({
     url: '/',
@@ -33,22 +35,26 @@ $(".hat").hide();
 
 
   function slideIn(hat){
+    $('#title-name').css('width', '550px');
     $(hat).show();
     $('#title-name').addClass('slide-effect')
-    $('#title-description').addClass('slide-effect2')
+    $('.title-description').addClass('slide-effect2')
     $(hat).removeClass('slideOutRight')
     $(hat).addClass('slideInRight')
   }
   function slideOut(hat){
     $('#title-name').removeClass('slide-effect')
-    $('#title-description').removeClass('slide-effect2')
+    $('.title-description').removeClass('slide-effect2')
+    $('#title-name').css('width', '390px');
     $(hat).removeClass('slideInRight')
     $(hat).addClass('slideOutRight')
   }
   function changeNameTimer(num, hat){
     setTimeout(function changeName(){
     $('#title-name').html(items[num].title)
-    $('#title-description').html(items[num].description)
+    $('.title-description').html(items[num].description)
+    if(num === 0 || num === 5){$('.title-description').append("<div id='contact-icons'><i class='fa fa-envelope-square' aria-hidden='true'></i><i class='fa fa-git-square' aria-hidden='true'></i><i class='fa fa-linkedin-square' aria-hidden='true'></i><i class='fa fa-phone-square' aria-hidden='true'></i></div>")};
+
     slideIn(hat);
     }, 1000)
   }
@@ -97,6 +103,12 @@ $(".hat").hide();
     changeNameTimer(4, hat);
     lastHat = '#cowboy'
   })
-
+  $('#contact').click(function(event){ 
+    var hat = 'none'
+    resetSquare();
+    slideOut(lastHat);
+    changeNameTimer(5, hat);
+    lastHat = '#miner'
+  })
   
 }); 

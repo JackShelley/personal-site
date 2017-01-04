@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"
 <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <script src="https://use.fontawesome.com/9172b560d3.js"></script>
 </head>
 
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -29,12 +30,18 @@
   </div>
 
   <div class="wrapper">
-    <div class='quicksand slide'id='title-name'>AAAAAHHHH</div> 
-     <div class='quicksand slide'id='title-name'><%=@thing.first['title']%></div> 
+     <div class='quicksand slide slide-effect'id='title-name'><%=@thing.first['title']%></div> 
   </div>
 
     <div class="wrapper2">
-      <div class='quicksand slide2' id='title-description'><%=@thing.first['description']%></div>
+       <div class='quicksand slide2 title-description slide-effect2'><%=@thing.first['description']%>
+        <div id='contact-icons'>
+          <i class="fa fa-envelope-square" aria-hidden="true"></i>
+          <i class="fa fa-git-square" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          <i class="fa fa-phone-square" aria-hidden="true"></i>
+        </div>
+       </div>
     </div>
 
     <div id='home_drawing'><%= image_tag("imageedit_7_5031060546.png", size: "500x740", alt: "home_drawing") %></div>
@@ -53,6 +60,7 @@
     </div>
       <div class="demo animated">
 </div>
+<div id='contact' class='quicksand'>contact</div>
 
 </body>
 </html>
