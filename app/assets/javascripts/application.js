@@ -23,6 +23,7 @@ $(document).ready(function(){
 $(".hat").hide();
 $('#title-name').addClass('slide-effect')
 $('.title-description').addClass('slide-effect2')
+$('#square1').css('background-color', "#777777")
 
   $.ajax({
     url: '/',
@@ -54,6 +55,8 @@ $('.title-description').addClass('slide-effect2')
     $('#title-name').html(items[num].title)
     $('.title-description').html(items[num].description)
     if(num === 0 || num === 5){$('.title-description').append("<div id='contact-icons'><i class='fa fa-envelope-square' aria-hidden='true'></i><i class='fa fa-git-square' aria-hidden='true'></i><i class='fa fa-linkedin-square' aria-hidden='true'></i><i class='fa fa-phone-square' aria-hidden='true'></i></div>")};
+    if(num === 1){$('.title-description').append("<ul>Languages<li>Ruby</li><li>JavaScript</li><li>CSS</li><li>HTML</li><li>JQuery</li><li>CSS</li><li>SQL</li><li>React</li></ul>")};
+    if(num === 4){$('.title-description').append(" <br>Contact Info: <br><br> Phone: (512)905-2164 <br><br> Email: jackbradfordshelley@gmail.com <br><br> Github: https://github.com/JackShelley <br><br> Linkedin: https://www.linkedin.com/in/jackshelley")};
 
     slideIn(hat);
     }, 1000)
@@ -63,52 +66,44 @@ $('.title-description').addClass('slide-effect2')
   }
 
   $('#square1').click(function(event){ 
-    var hat = '#wizard'
+    var hat = '#none'
     resetSquare();
-    $('#square1').css('background-color', "white")
+    $('#square1').css('background-color', "#777777")
     slideOut(lastHat);
     changeNameTimer(0, hat);
     lastHat = '#wizard'
   })
-
   $('#square2').click(function(event){ 
+    var hat = '#wizard'
+    resetSquare();
+    $('#square2').css('background-color', "#d628bf")
+    slideOut(lastHat);
+    changeNameTimer(2, hat);
+    lastHat = '#wizard'
+  })
+  $('#square3').click(function(event){ 
     var hat = '#cowboy'
     resetSquare();
-    $('#square2').css('background-color', "white")
+    $('#square3').css('background-color', "#ff305d")
     slideOut(lastHat);
     changeNameTimer(1, hat);
     lastHat = '#cowboy'
   })
-  $('#square3').click(function(event){ 
+  $('#square4').click(function(event){ 
     var hat = '#miner'
     resetSquare();
-    $('#square3').css('background-color', "white")
-    slideOut(lastHat);
-    changeNameTimer(2, hat);
-    lastHat = '#miner'
-  })
-  $('#square4').click(function(event){ 
-    var hat = '#wizard'
-    resetSquare();
-    $('#square4').css('background-color', "white")
+    $('#square4').css('background-color', "#e8d230")
     slideOut(lastHat);
     changeNameTimer(3, hat);
-    lastHat = '#wizard'
+    lastHat = '#miner'
   })
   $('#square5').click(function(event){ 
-    var hat = '#cowboy'
+    var hat = '#none'
     resetSquare();
-    $('#square5').css('background-color', "white")
+    $('#square5').css('background-color', "#777777")
     slideOut(lastHat);
     changeNameTimer(4, hat);
-    lastHat = '#cowboy'
-  })
-  $('#contact').click(function(event){ 
-    var hat = 'none'
-    resetSquare();
-    slideOut(lastHat);
-    changeNameTimer(5, hat);
-    lastHat = '#miner'
+    lastHat = '#none'
   })
   
 }); 
