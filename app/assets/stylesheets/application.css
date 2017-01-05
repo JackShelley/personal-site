@@ -41,10 +41,9 @@ body{
 #title-container{
   margin-top: -80px;
 }
-
 #name{
   box-shadow: 0px 0px 12px 6px #565656;
-  background: #f76a6a;
+  background: #ed4f4e;
   padding: 5px;
   padding-left: 3px;
   padding-right: 3px;
@@ -75,7 +74,17 @@ body{
   font-size: 55px;
   color: #f9f9f9;
 }
-.fa:hover{
+.fa2{
+  font-size: 43px;
+/*  padding-left: 4px;
+  padding-top: 6px;*/
+}
+/*.fa-diamond{
+  font-size: 40px;
+  padding-left: 2px;
+  padding-top: 3.5px;
+}
+*/.fa:hover{
   color: #efefef;
 }
 #contact-icons{
@@ -94,7 +103,7 @@ body{
   box-shadow: 0px 0px 12px 6px #565656;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: #f76a6a;
+  background-color: #ed4f4e;
   display: inline-block;
   text-align: center;
   letter-spacing: 2px;
@@ -110,7 +119,7 @@ body{
 }
 .title-description{
   box-shadow: 0px 0px 12px 6px #565656;
-  background: #f76a6a;
+  background: #ed4f4e;
   padding: 20px;
   padding-bottom: 30px;
   padding-left: 40px;
@@ -166,11 +175,14 @@ body{
   -webkit-border-radius: 50px 50px;
   border-radius: 10px/10px;
   border: solid 7px #f9f9f9;
+  padding: 5px 5px 0 3px;
+  text-align: center;
   width: 50px;
   height: 50px;
   display: inline-block;
   margin-left: 20px;
 }
+
 .square:hover{
    border: solid 7px white;
    box-shadow: 1px 1px 12px 1px #565656;
